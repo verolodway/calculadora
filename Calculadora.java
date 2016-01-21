@@ -40,9 +40,30 @@ public class Calculadora
         int numero = 1;
         while(numero<=10){
             suma = numero + suma;
-            System.out.println(suma);
             numero = numero + 1;
         }
         return suma;
+    }
+    
+    /**
+     * Método que recibe dos parámetros enteros a y b y devuelve la suma de los valores comprendidos entre dichos parámetros (ambos incluidos)
+     */
+    public int sumValuesInterval(int a, int b){
+        if (a < b){
+            int suma = 0;
+            while (a < b){
+                suma = suma+a;
+                a = a + 1;
+            }
+            return suma;
+        }
+        else{
+            int suma = 0;
+            while (b < a){
+                suma = suma + b;
+                b = b +1;
+            }
+            return suma;
+        }
     }
 }
