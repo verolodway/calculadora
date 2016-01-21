@@ -31,4 +31,17 @@ public class Calculadora
            numero = numero + 5;
         }
     }
+    
+    /**
+     * Método que nos permite sumar los números del 0 al 10
+     */
+    public int sumValues(){
+        int numer = 0;
+        int suma = numer+(numer+1);
+        while(numer>=0 && numer<=10){
+            System.out.println(suma);
+            numer=numer++;
+        }
+        return suma;
+    }
 }
