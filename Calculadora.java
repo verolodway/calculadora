@@ -49,21 +49,23 @@ public class Calculadora
      * Método que recibe dos parámetros enteros a y b y devuelve la suma de los valores comprendidos entre dichos parámetros (ambos incluidos)
      */
     public int sumValuesInterval(int a, int b){
-        if (a < b){
-            int suma = 0;
-            while (a < b){
-                suma = suma+a;
-                a = a + 1;
+        if (a >= 0 && b >= 0){
+            if(b < a){
+            a = b;
+            b = a;
+           }
+            else if (b == a){
+            return a;
             }
-            return suma;
+           int suma = 0;
+           while (a < b){
+              suma = suma+a;
+              a = a + 1;
+           }
+           return suma;
         }
         else{
-            int suma = 0;
-            while (b < a){
-                suma = suma + b;
-                b = b +1;
-            }
-            return suma;
+            return -1;
         }
     }
 }
