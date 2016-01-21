@@ -36,11 +36,12 @@ public class Calculadora
      * Método que nos permite sumar los números del 0 al 10
      */
     public int sumValues(){
-        int numer = 0;
-        int suma = numer+(numer+1);
-        while(numer>=0 && numer<=10){
+        int suma = 0;
+        int numero = 1;
+        while(numero<=10){
+            suma = numero + suma;
             System.out.println(suma);
-            numer=numer++;
+            numero = numero + 1;
         }
         return suma;
     }
