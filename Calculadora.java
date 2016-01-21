@@ -68,4 +68,26 @@ public class Calculadora
             return -1;
         }
     }
+    
+    /**
+     * Método que nos permite saber si un número es o no primo
+     */
+    public boolean isPrime(int n){
+        int divisor = 2;
+        int resultado = n/divisor;
+        if (n > 1){
+            while (divisor <= (n-1)){
+                resultado = n/divisor;
+                if (n % divisor != 0){
+                    divisor = divisor + 1;
+                    return true;
+                }
+            }
+        }
+        else{
+            System.out.println("El parámetro establecido no es válido.");
+            
+        }
+        return false;
+    }
 }
