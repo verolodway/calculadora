@@ -95,18 +95,13 @@ public class Calculadora
      * Método que nos permite realizar multiplicaciones entre enteros
      */
     public int multiplicaEnteros(int a, int b){
-        if(a<0 && b<0){
-        int c = 0;
-        if (a>b)
-        {
-            int mayor = a;
-            a = b;
-            b = mayor;  
+        if(a>0 && b>0){
+        int limite = 0;
+        limite = b;
+        while(limite>b){
+            a = a + a;
         }
-        while(a<b){
-            c = a + a;
-        }
-        return c;
+        return a;
        }
        else{
            System.out.println("ERROR");
