@@ -35,14 +35,14 @@ public class Calculadora
     /**
      * Método que nos permite sumar los números del 0 al 10
      */
-    public int sumValues(){
+    public void sumValues(){
         int suma = 0;
         int numero = 1;
         while(numero<=10){
             suma = numero + suma;
             numero = numero + 1;
         }
-        return suma;
+        System.out.println(suma);
     }
     
     /**
@@ -51,8 +51,9 @@ public class Calculadora
     public int sumValuesInterval(int a, int b){
         if (a >= 0 && b >= 0){
             if(b < a){
+            int almacenado = a;
             a = b;
-            b = a;
+            b = almacenado;
            }
             else if (b == a){
             return a;
@@ -89,4 +90,28 @@ public class Calculadora
         }
         return false;
     }
+    
+    /**
+     * Método que nos permite realizar multiplicaciones entre enteros
+     */
+    public int multiplicaEnteros(int a, int b){
+        if(a<0 && b<0){
+        int c = 0;
+        if (a>b)
+        {
+            int mayor = a;
+            a = b;
+            b = mayor;  
+        }
+        while(a<b){
+            c = a + a;
+        }
+        return c;
+       }
+       else{
+           System.out.println("ERROR");
+           return -1;
+        }
+    }
+    
 }
